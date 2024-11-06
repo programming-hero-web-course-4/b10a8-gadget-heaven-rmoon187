@@ -1,0 +1,322 @@
+[
+    {
+        "product_id": "001",
+        "product_title": "Apple iPhone 14 Pro Max",
+        "product_image": "https://i.ibb.co.com/z6Q6B5g/1.jpg",
+        "category": "Smartphones",
+        "price": 1099.99,
+        "description": "The latest iPhone with advanced camera features and powerful performance.",
+        "Specification": [
+            "6.7-inch Super Retina XDR Display",
+            "128GB, 256GB, 512GB, or 1TB Storage",
+            "5G Enabled",
+            "Triple Camera System"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "002",
+        "product_title": "Samsung Galaxy S23 Ultra",
+        "product_image": "https://i.ibb.co.com/BCVZfgN/2.jpg",
+        "category": "Smartphones",
+        "price": 1199.99,
+        "description": "High-end smartphone with S-Pen support and 200MP camera.",
+        "Specification": [
+            "6.8-inch Dynamic AMOLED 2X Display",
+            "256GB, 512GB, or 1TB Storage",
+            "S-Pen Included",
+            "200MP Quad Camera System"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "003",
+        "product_title": "Google Pixel 7 Pro",
+        "product_image": "https://i.ibb.co.com/bdgvbYz/3.jpg",
+        "category": "Smartphones",
+        "price": 899.99,
+        "description": "Google’s flagship phone with excellent AI-powered camera capabilities.",
+        "Specification": [
+            "6.7-inch LTPO OLED Display",
+            "128GB, 256GB, or 512GB Storage",
+            "5G Connectivity",
+            "Triple Rear Camera"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "004",
+        "product_title": "MacBook Pro 16-inch",
+        "product_image": "https://i.ibb.co.com/TvLfGLX/4.jpg",
+        "category": "Laptops",
+        "price": 2499.99,
+        "description": "Apple’s powerful laptop with M2 Max chip for professional use.",
+        "Specification": [
+            "16.2-inch Liquid Retina XDR Display",
+            "512GB, 1TB, or 2TB SSD",
+            "M2 Max Chip",
+            "16GB or 32GB RAM"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "005",
+        "product_title": "Dell XPS 13 Plus",
+        "product_image": "https://i.ibb.co.com/ZBMDFsT/5.jpg",
+        "category": "Laptops",
+        "price": 1499.99,
+        "description": "Lightweight and powerful laptop, great for professionals on the go.",
+        "Specification": [
+            "13.4-inch FHD+ InfinityEdge Display",
+            "512GB SSD",
+            "Intel Core i7 Processor",
+            "16GB RAM"
+        ],
+        "availability": false,
+        "rating": 4.7
+    },
+    {
+        "product_id": "006",
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.ibb.co.com/BZRMfbM/6.jpg",
+        "category": "Audio",
+        "price": 399.99,
+        "description": "Industry-leading noise-cancelling headphones with superb sound quality.",
+        "Specification": [
+            "30 Hours Battery Life",
+            "Bluetooth 5.2",
+            "Adaptive Noise Cancelling",
+            "Quick Charge"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "007",
+        "product_title": "Bose QuietComfort Earbuds II",
+        "product_image": "https://i.ibb.co.com/TqTLBN0/7.jpg",
+        "category": "Audio",
+        "price": 279.99,
+        "description": "High-quality noise-cancelling earbuds with adjustable fit.",
+        "Specification": [
+            "Up to 24 Hours Battery Life",
+            "Bluetooth 5.3",
+            "Adjustable Noise Cancelling",
+            "Water Resistant"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "008",
+        "product_title": "Apple Watch Series 8",
+        "product_image": "https://i.ibb.co.com/3rzyzm2/8.jpg",
+        "category": "Wearables",
+        "price": 399.99,
+        "description": "Latest Apple Watch with advanced health tracking and crash detection.",
+        "Specification": [
+            "1.9-inch OLED Display",
+            "Heart Rate & ECG Monitoring",
+            "GPS and Cellular Connectivity",
+            "Water Resistant up to 50m"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "009",
+        "product_title": "Samsung Galaxy Watch5 Pro",
+        "product_image": "https://i.ibb.co.com/4pQWzFC/9.jpg",
+        "category": "Wearables",
+        "price": 449.99,
+        "description": "Durable smartwatch with outdoor-friendly features and advanced fitness tracking.",
+        "Specification": [
+            "1.4-inch AMOLED Display",
+            "GPS and LTE Connectivity",
+            "Blood Oxygen & ECG Monitoring",
+            "50 Hours Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "010",
+        "product_title": "iPad Pro 12.9-inch (2023)",
+        "product_image": "https://i.ibb.co.com/4tnwwmW/10.jpg",
+        "category": "Tablets",
+        "price": 1099.99,
+        "description": "High-end tablet with M2 chip, ideal for creatives and professionals.",
+        "Specification": [
+            "12.9-inch Liquid Retina XDR Display",
+            "128GB, 256GB, 512GB, 1TB, or 2TB Storage",
+            "M2 Chip",
+            "Apple Pencil and Magic Keyboard Support"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "011",
+        "product_title": "Samsung Galaxy Tab S9 Ultra",
+        "product_image": "https://i.ibb.co.com/QQvGkHB/11.jpg",
+        "category": "Tablets",
+        "price": 1199.99,
+        "description": "Large-screen Android tablet with high-resolution display and stylus support.",
+        "Specification": [
+            "14.6-inch Super AMOLED Display",
+            "512GB or 1TB Storage",
+            "S-Pen Support",
+            "Dual Rear Cameras"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "012",
+        "product_title": "OnePlus 11",
+        "product_image": "https://i.ibb.co.com/rZQtCPf/12.jpg",
+        "category": "Smartphones",
+        "price": 699.99,
+        "description": "Flagship OnePlus smartphone with fast performance and excellent display.",
+        "Specification": [
+            "6.7-inch AMOLED Display",
+            "128GB, 256GB Storage",
+            "5G Connectivity",
+            "Triple Rear Camera"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "013",
+        "product_title": "Xiaomi 13 Pro",
+        "product_image": "https://i.ibb.co.com/sjHhKN6/13.jpg",
+        "category": "Smartphones",
+        "price": 899.99,
+        "description": "High-end smartphone with Leica co-engineered camera system.",
+        "Specification": [
+            "6.73-inch LTPO OLED Display",
+            "256GB or 512GB Storage",
+            "5G Enabled",
+            "50MP Triple Camera"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "014",
+        "product_title": "ASUS ROG Phone 7",
+        "product_image": "https://i.ibb.co.com/6y4cFTj/14.jpg",
+        "category": "Smartphones",
+        "price": 999.99,
+        "description": "Gaming smartphone with top-notch graphics and refresh rate.",
+        "Specification": [
+            "6.78-inch AMOLED Display",
+            "256GB Storage",
+            "5G Connectivity",
+            "6000mAh Battery"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "015",
+        "product_title": "Microsoft Surface Laptop Studio",
+        "product_image": "https://i.ibb.co.com/9nr8QQf/15.jpg",
+        "category": "Laptops",
+        "price": 1599.99,
+        "description": "Creative-focused laptop with a unique convertible design.",
+        "Specification": [
+            "14.4-inch PixelSense Flow Display",
+            "512GB or 1TB SSD",
+            "Intel Core i7 Processor",
+            "16GB or 32GB RAM"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "016",
+        "product_title": "HP Spectre x360 14",
+        "product_image": "https://i.ibb.co.com/6tfgt23/16.jpg",
+        "category": "Laptops",
+        "price": 1399.99,
+        "description": "Versatile 2-in-1 laptop with OLED display and impressive battery life.",
+        "Specification": [
+            "13.5-inch OLED Display",
+            "512GB SSD",
+            "Intel Core i7 Processor",
+            "16GB RAM"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "017",
+        "product_title": "Lenovo ThinkPad X1 Carbon Gen 10",
+        "product_image": "https://i.ibb.co.com/b3TvLzf/17.jpg",
+        "category": "Laptops",
+        "price": 1799.99,
+        "description": "Durable, lightweight laptop with business-grade features.",
+        "Specification": [
+            "14-inch FHD Display",
+            "512GB SSD",
+            "Intel Core i7 Processor",
+            "16GB RAM"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "018",
+        "product_title": "JBL Flip 6",
+        "product_image": "https://i.ibb.co.com/6Pj8Sg1/18.jpg",
+        "category": "Audio",
+        "price": 129.99,
+        "description": "Portable Bluetooth speaker with powerful sound and waterproof design.",
+        "Specification": [
+            "12 Hours Battery Life",
+            "Bluetooth 5.1",
+            "Waterproof (IP67)",
+            "Dual Passive Radiators"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "019",
+        "product_title": "Beats Fit Pro",
+        "product_image": "https://i.ibb.co.com/4MSJpzh/19.jpg",
+        "category": "Audio",
+        "price": 199.99,
+        "description": "True wireless earbuds with active noise cancellation and secure fit.",
+        "Specification": [
+            "24 Hours Battery Life",
+            "Bluetooth 5.0",
+            "Noise Cancelling",
+            "Water and Sweat Resistant"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": "020",
+        "product_title": "Garmin Fenix 7",
+        "product_image": "https://i.ibb.co.com/MhQ4jxs/20.jpg",
+        "category": "Wearables",
+        "price": 699.99,
+        "description": "Rugged smartwatch designed for outdoor adventures with GPS and solar charging.",
+        "Specification": [
+            "1.3-inch Display",
+            "GPS and Solar Charging",
+            "Heart Rate & Pulse Ox",
+            "Waterproof up to 100m"
+        ],
+        "availability": true,
+        "rating": 4.8
+    }
+]
