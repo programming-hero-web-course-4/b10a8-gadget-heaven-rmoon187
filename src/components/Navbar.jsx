@@ -2,7 +2,15 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { GiShoppingCart } from "react-icons/gi";
 import { CiHeart } from "react-icons/ci";
+import { useState } from 'react';
+import Details from '../pages/Details';
 const Navbar = () => {
+
+    const [count, setCount] = useState(0);
+    const addToCart = () => {
+        setCount(prevCount => prevCount + 1);
+    };
+
     return (
         <div className="navbar bg-base-100 max-w-screen-xl mx-auto">
             <div className="navbar-start">
@@ -38,10 +46,13 @@ const Navbar = () => {
                     <NavLink to='/dashboard'>Dashboard</NavLink>
                 </ul>
             </div>
-            <div className="navbar-end flex gap-10">
-                <Link className='w-10 h-10 box-border border border-[rgba(11,11,11,0.1)] rounded-full flex items-center justify-center'><GiShoppingCart className='text-2xl' /></Link>
+            <div className="navbar-end flex gap-10 relative">
+
+                <Link className="w-10 h-10 box-border border border-[rgba(11,11,11,0.1)] rounded-full flex items-center justify-center"> <GiShoppingCart className="text-2xl" /> {count > 0 && (<span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"> {count}</span>)} </Link>
+
                 <Link className='w-10 h-10 box-border border border-[rgba(11,11,11,0.1)] rounded-full flex items-center justify-center'><CiHeart className='text-2xl' /></Link>
             </div>
+
         </div>
     );
 };

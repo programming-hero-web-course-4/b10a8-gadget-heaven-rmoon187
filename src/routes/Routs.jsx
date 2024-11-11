@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import Statistics from '../pages/Statistics';
 import Dashbord from '../pages/Dashbord';
 import Gadgets from '../components/Gadgets';
+import Details from '../pages/Details';
 
 
 const routes = createBrowserRouter([
@@ -40,7 +41,12 @@ const routes = createBrowserRouter([
             {
                 path: "/dashboard",
                 element: <Dashbord></Dashbord>,
-            }
+            },
+            {
+                path: "/gadget/:id",
+                element: <Details></Details>,
+                loader: () => fetch('../fake.json')
+            },
         ]
     },
 ]);
