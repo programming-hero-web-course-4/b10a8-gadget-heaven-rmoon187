@@ -1,18 +1,36 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { GiShoppingCart } from "react-icons/gi";
 import { CiHeart } from "react-icons/ci";
 import { useState } from 'react';
-import Details from '../pages/Details';
 const Navbar = () => {
 
-    const [count, setCount] = useState(0);
-    const addToCart = () => {
-        setCount(prevCount => prevCount + 1);
-    };
+    const bars = <>
+        <NavLink to='/'
+            className={({ isActive }) =>
+                isActive
+                    ? "text-blue-600 font-bold"
+                    : "text-gray-600 hover:text-gray-800"
+            }
+        >Home</NavLink>
+        <NavLink to='/stats'
+            className={({ isActive }) =>
+                isActive
+                    ? "text-blue-600 font-bold"
+                    : "text-gray-600 hover:text-gray-800"
+            }
+        >Statistics</NavLink>
+        <NavLink to='/dashboard'
+            className={({ isActive }) =>
+                isActive
+                    ? "text-blue-600 font-bold"
+                    : "text-gray-600 hover:text-gray-800"
+            }
+        >Dashboard</NavLink>
+    </>
 
     return (
-        <div className="navbar bg-base-100 max-w-screen-xl mx-auto">
+        <div className="navbar  max-w-screen-xl mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,26 +49,22 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-[rgba(11,11,11,0.7)]">
-                        <NavLink to='/'>Home</NavLink>
-                        <NavLink to='/stats'>Statistics</NavLink>
-                        <NavLink to='/dashboard'>Dashboard</NavLink>
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow  ">
+                        {bars}
                     </ul>
                 </div>
                 <Link to='/' className='text-xl font-bold'>Gadget Heaven</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal gap-10 text-[rgba(11,11,11,0.7)]">
-                    <NavLink to='/'>Home</NavLink>
-                    <NavLink to='/stats'>Statistics</NavLink>
-                    <NavLink to='/dashboard'>Dashboard</NavLink>
+                <ul className="menu menu-horizontal gap-10 ">
+                    {bars}
                 </ul>
             </div>
             <div className="navbar-end flex gap-10 relative">
 
-                <Link className="w-10 h-10 box-border border border-[rgba(11,11,11,0.1)] rounded-full flex items-center justify-center"> <GiShoppingCart className="text-2xl" /> {count > 0 && (<span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"> {count}</span>)} </Link>
+                <Link className="w-10 h-10 bg-white box-border border border-[rgba(11,11,11,0.1)] rounded-full flex items-center justify-center text-black"> <GiShoppingCart className="text-2xl" /> </Link>
 
-                <Link className='w-10 h-10 box-border border border-[rgba(11,11,11,0.1)] rounded-full flex items-center justify-center'><CiHeart className='text-2xl' /></Link>
+                <Link className='w-10 h-10 box-border border bg-white text-black border-[rgba(11,11,11,0.1)] rounded-full flex items-center justify-center'><CiHeart className='text-2xl' /></Link>
             </div>
 
         </div>

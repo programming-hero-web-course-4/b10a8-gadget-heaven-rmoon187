@@ -1,54 +1,69 @@
 import React from 'react';
 import { createBrowserRouter } from "react-router-dom";
-import Layouts from '../layouts/Layouts';
-import Home from '../pages/Home';
 import Statistics from '../pages/Statistics';
-import Dashbord from '../pages/Dashbord';
 import Gadgets from '../components/Gadgets';
 import Details from '../pages/Details';
+import HomeLayout from '../layouts/HomeLayout';
+import Dashboard from '../pages/Dashboard';
+import Home from '../pages/Home';
+import Cart from '../components/Cart';
+import Wish from '../components/Wish';
+import ErrorPge from '../pages/error/ErrorPge';
+
 
 
 const routes = createBrowserRouter([
     {
         path: "/",
-        element: <Layouts></Layouts>,
+        element: <HomeLayout></HomeLayout>,
+        errorElement: <ErrorPge></ErrorPge>,
         children: [
             {
-                path: "/",
+                path: '/',
+                loader: () => fetch('/categories.json'),
                 element: <Home></Home>,
-                loader: () => fetch('../categories.json'),
                 children: [
-
                     {
                         path: "/",
+                        loader: () => fetch('../fake.json'),
                         element: <Gadgets></Gadgets>,
-                        loader: () => fetch('../fake.json')
                     },
+
                     {
                         path: "/category/:category",
+                        loader: () => fetch('../fake.json'),
                         element: <Gadgets></Gadgets>,
-                        loader: () => fetch('../fake.json')
                     },
+                ]
+            },
 
-
-
+            {
+                path: "/details/gadget/:id",
+                loader: () => fetch('../fake.json'),
+                element: <Details></Details>,
+            },
+            {
+                path: "/dashboard",
+                element: <Dashboard></Dashboard>,
+                children: [
+                    {
+                        path: "/dashboard/cart",
+                        element: <Cart></Cart>
+                    },
+                    {
+                        path: "/dashboard/wishlist",
+                        element: <Wish></Wish>
+                    },
                 ]
             },
             {
                 path: "/stats",
                 element: <Statistics></Statistics>,
             },
-            {
-                path: "/dashboard",
-                element: <Dashbord></Dashbord>,
-            },
-            {
-                path: "/gadget/:id",
-                element: <Details></Details>,
-                loader: () => fetch('../fake.json')
-            },
         ]
     },
+
+
 ]);
 
 
