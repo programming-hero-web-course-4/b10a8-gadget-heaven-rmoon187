@@ -24,22 +24,18 @@ const routes = createBrowserRouter([
                 element: <Home></Home>,
                 children: [
                     {
-                        path: "/",
-                        loader: () => fetch('../fake.json'),
+                        path: "/category/:category",
                         element: <Gadgets></Gadgets>,
                     },
-
                     {
-                        path: "/category/:category",
-                        loader: () => fetch('../fake.json'),
+                        path: "/",
                         element: <Gadgets></Gadgets>,
                     },
                 ]
             },
-
             {
                 path: "/details/gadget/:id",
-                loader: () => fetch('../fake.json'),
+                loader: () => fetch('/fake.json'),
                 element: <Details></Details>,
             },
             {

@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Gadget from './Gadget';
+import DashContext from '../provider/DashContext';
 
 
 const Gadgets = () => {
 
     const { category } = useParams()
 
-    const allData = useLoaderData()
+    const { data } = useContext(DashContext)
+
+    const allData = data;
 
     const [gadgets, setGadgets] = useState([])
 

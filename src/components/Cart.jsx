@@ -1,13 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
 import DashContext from '../provider/DashContext';
 import Card from './Card';
+import Modal from './Modal';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
-    const { cart } = useContext(DashContext)
+    const { cart, setCart } = useContext(DashContext)
 
     const [cost, setCost] = useState(0)
     const [arr, setArr] = useState([])
+
+
+
+    const navigate = useNavigate()
 
     useEffect(() => {
 
@@ -25,6 +31,19 @@ const Cart = () => {
         setArr(sortedCart)
     }
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handlePurchase = () => {
+        setIsModalOpen(true);
+        setCart([])
+        setArr([])
+        setCost(0)
+
+    }
+    const closeModal = () => {
+        setIsModalOpen(false);
+        navigate('/')
+    }
 
     return (
         <div className='bg-gray-200 min-h-screen pb-10'>
@@ -34,7 +53,8 @@ const Cart = () => {
                     <div className='flex gap-5 items-center'>
                         <p className='text-xl font-bold'>Total cost: ${cost}</p>
                         <button onClick={sortCart} className="btn btn-outline btn-success">Sort by Price</button>
-                        <button className="btn bg-[rgba(149,56,226,0.6)]">Purchase</button>
+                        <button disabled={cart.length === 0 || cost === 0}
+                            onClick={handlePurchase} className="btn bg-[rgba(149,56,226,0.6)]">Purchase</button>
                     </div>
                 </div>
                 <div className='flex flex-col  gap-5 '>
@@ -43,6 +63,8 @@ const Cart = () => {
                     }
                 </div>
             </div>
+            {isModalOpen && <Modal cost={cost} closeModal={closeModal}></Modal>}
+
         </div>
     );
 };

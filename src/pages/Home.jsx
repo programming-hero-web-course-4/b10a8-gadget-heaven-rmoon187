@@ -2,6 +2,8 @@ import React from 'react';
 import Banner from '../components/Banner';
 import { Outlet, useLoaderData } from 'react-router-dom';
 import Categories from '../components/Categories';
+import { Helmet } from 'react-helmet-async';
+import Gadgets from '../components/Gadgets';
 
 const Home = () => {
 
@@ -9,11 +11,16 @@ const Home = () => {
 
     return (
         <div className='bg-gray-200 p-7'>
+            <Helmet>
+                <title>Home - Gadget Heaven</title>
+            </Helmet>
+
             <Banner></Banner>
             <h2 className='text-4xl font-bold text-center -mt-40'>Explore Cutting-Edge Gadgets</h2>
             <div className='flex justify-start  gap-20 mt-20 ml-20 '>
                 <Categories data={data} ></Categories>
                 <Outlet></Outlet>
+
             </div>
 
         </div>

@@ -7,6 +7,8 @@ const Provider = ({ children }) => {
     const [data, setData] = useState([])
     const [cart, setCart] = useState([])
     const [wish, setWish] = useState([])
+    const [cartItems, setCartItems] = useState([]);
+    const [wishlistItems, setWishlistItems] = useState([]);
 
     useEffect(() => {
         fetch('/fake.json')
@@ -23,7 +25,7 @@ const Provider = ({ children }) => {
 
 
     const info = {
-        data, cart, setCart, wish, setWish
+        data, cart, setCart, wish, setWish, setCartItems, setWishlistItems, cartItems, wishlistItems
     }
     return (
         <DashContext.Provider value={info}>

@@ -1,36 +1,53 @@
 import React from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { GiShoppingCart } from "react-icons/gi";
 import { CiHeart } from "react-icons/ci";
-import { useState } from 'react';
 const Navbar = () => {
 
-    const bars = <>
-        <NavLink to='/'
-            className={({ isActive }) =>
-                isActive
-                    ? "text-blue-600 font-bold"
-                    : "text-gray-600 hover:text-gray-800"
-            }
-        >Home</NavLink>
-        <NavLink to='/stats'
-            className={({ isActive }) =>
-                isActive
-                    ? "text-blue-600 font-bold"
-                    : "text-gray-600 hover:text-gray-800"
-            }
-        >Statistics</NavLink>
-        <NavLink to='/dashboard'
-            className={({ isActive }) =>
-                isActive
-                    ? "text-blue-600 font-bold"
-                    : "text-gray-600 hover:text-gray-800"
-            }
-        >Dashboard</NavLink>
-    </>
+    const location = useLocation();
+    const isHomePage = location.pathname === "/";
+
+
+    const bars = (
+        <>
+            <NavLink
+                to="/"
+                className={({ isActive }) =>
+                    `${isActive ? "font-bold" : ""} ${isHomePage
+                        ? "text-white hover:text-gray-200"
+                        : "text-gray-600 hover:text-gray-800"
+                    }`
+                }
+            >
+                Home
+            </NavLink>
+            <NavLink
+                to="/stats"
+                className={({ isActive }) =>
+                    `${isActive ? "font-bold" : ""} ${isHomePage
+                        ? "text-white hover:text-gray-200"
+                        : "text-gray-600 hover:text-gray-800"
+                    }`
+                }
+            >
+                Statistics
+            </NavLink>
+            <NavLink
+                to="/dashboard"
+                className={({ isActive }) =>
+                    `${isActive ? "font-bold" : ""} ${isHomePage
+                        ? "text-white hover:text-gray-200"
+                        : "text-gray-600 hover:text-gray-800"
+                    }`
+                }
+            >
+                Dashboard
+            </NavLink>
+        </>
+    )
 
     return (
-        <div className="navbar  max-w-screen-xl mx-auto">
+        <div className={`navbar  max-w-screen-xl mx-auto`}  >
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
