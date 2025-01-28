@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-
+import icon from "/src/assets/Group.png"
 
 const Modal = ({ closeModal, cost }) => {
     const dialogRef = useRef(null);
@@ -21,7 +21,7 @@ const Modal = ({ closeModal, cost }) => {
         <div>
             <dialog ref={dialogRef} id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box text-center space-y-3">
-                    <img className='mx-auto' src="/src/assets/Group.png" alt="" />
+                    <img className='mx-auto' src={icon} alt="" />
                     <h3 className="font-bold text-3xl">Payment Successful</h3>
                     <div className="divider"></div>
                     <p className="font-medium text-gray-600">Thanks for purchasing</p>

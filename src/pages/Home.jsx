@@ -3,7 +3,7 @@ import Banner from '../components/Banner';
 import { Outlet, useLoaderData } from 'react-router-dom';
 import Categories from '../components/Categories';
 import { Helmet } from 'react-helmet-async';
-import Gadgets from '../components/Gadgets';
+
 
 const Home = () => {
 
